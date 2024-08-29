@@ -4,4 +4,4 @@ Currently supported:
 Oùra
 
 Sources:
-Oùra + TCL: https://forum.ubuntu-fr.org/viewtopic.php?id=1887151
+Oùra + e-tecely: https://forum.ubuntu-fr.org/viewtopic.php?id=1887151
