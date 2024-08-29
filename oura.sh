@@ -1,5 +1,26 @@
 #!/bin/sh
 
+if type "xdg-mime" > /dev/null; then
+  echo "xdg-mime found"
+else
+  echo "This script requires xdg-mime"
+  exit
+fi
+
+if type "curl" > /dev/null; then
+  echo "curl found"
+else
+  echo "This script requires curl"
+  exit
+fi
+
+if type "7z" > /dev/null; then
+  echo "p7zip found"
+else
+  echo "This script requires p7zip"
+  exit
+fi
+
 if [ -z ${1+x} ]; then
   echo "Please add Java 17 binary path as argument";
   exit
