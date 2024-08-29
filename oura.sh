@@ -1,6 +1,12 @@
 #!/bin/sh
 
-JAVA_BIN=$1
+if [ -z ${1+x} ]; then
+  echo "Please add Java 17 binary path as argument";
+  exit
+else
+  JAVA_BIN=$1
+  echo "Java binary: '$JAVA_BIN'";
+fi
 
 EXTRACT_DIR=oura-smartcard-setup
 
