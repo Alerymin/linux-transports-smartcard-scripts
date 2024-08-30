@@ -23,9 +23,16 @@ else
 fi
 
 if type "7z" > /dev/null; then
-  echo "p7zip found"
+  echo "7z found"
 else
   echo "This script requires p7zip"
+  exit
+fi
+
+if type "qtpaths" > /dev/null; then
+  echo "qtpaths found"
+else
+  echo "This script requires qt5-tools"
   exit
 fi
 
@@ -91,6 +98,6 @@ xdg-mime default "$SHORTCUT_PATH" x-scheme-handler/xscpsmartcard
 echo "MIME config done"
 
 cd ..
-rm -r $EXTRACT_DIR
+rm -rf $EXTRACT_DIR
 
 echo "Cleanup done"
