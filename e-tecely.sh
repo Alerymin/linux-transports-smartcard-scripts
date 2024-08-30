@@ -1,24 +1,32 @@
 #!/bin/sh
 
+echo <<EOF
+##############################################################
+Smart Card Plugin installer for e-Tecely
+by Alerymin
+https://github.com/Alerymin/linux-transports-smartcard-scripts
+##############################################################
+EOF
+
 if type "xdg-mime" > /dev/null; then
   echo "xdg-mime found"
 else
-  echo "This script requires xdg-mime"
-  exit
+    echo "This script requires $1"
+    exit
 fi
 
 if type "curl" > /dev/null; then
   echo "curl found"
 else
-  echo "This script requires curl"
-  exit
+    echo "This script requires $1"
+    exit
 fi
 
 if type "7z" > /dev/null; then
   echo "p7zip found"
 else
-  echo "This script requires p7zip"
-  exit
+    echo "This script requires $1"
+    exit
 fi
 
 if [ -z ${1+x} ]; then

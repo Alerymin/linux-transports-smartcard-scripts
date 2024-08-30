@@ -1,5 +1,13 @@
 #!/bin/sh
 
+echo <<EOF
+##############################################################
+Smart Card Plugin installer for Oùra
+by Alerymin
+https://github.com/Alerymin/linux-transports-smartcard-scripts
+##############################################################
+EOF
+
 if type "xdg-mime" > /dev/null; then
   echo "xdg-mime found"
 else
