@@ -94,7 +94,8 @@ EOF
 
 echo "$SHORTCUT_PATH created"
 
-xdg-mime default "$SHORTCUT_PATH" x-scheme-handler/x-scheme-handler/smartcard
+cd $SHORTCUT_DIR
+xdg-mime default $SHORTCUT_NAME x-scheme-handler/x-scheme-handler/smartcard
 
 echo "MIME config done"
 
